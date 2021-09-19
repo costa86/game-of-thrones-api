@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{title}}</title>
+</head>
+
+<body>
+    <table>
+        <thead>
+            <th>ID</th>
+            <th>TITLE</th>
+            <th>RELEASED</th>
+            <th>EPISODE</th>
+            <th>IMDB RATING</th>
+            <th>IMDB ID</th>
+            <th>SEASON</th>
+        </thead>
+        <tbody>
+            {% for i in episodes %}
+            <tr>
+                <td>{{ i._id }}</td>
+                <td>{{ i.Title }}</td>
+                <td>{{ i.Released }}</td>
+                <td>{{ i.Episode }}</td>
+                <td>{{ i.imdbRating }}</td>
+                <td>{{ i.imdbID }}</td>
+                <td>{{ i.Season }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</body>
+
+</html>

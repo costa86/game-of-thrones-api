@@ -1,0 +1,34 @@
+version: '3.1'
+
+services:
+  flask:
+    build: .
+    container_name: flask_con
+    command: flask run
+    volumes:
+      - .:/code
+    ports: 
+      - 5000:5000
+    env_file: 
+      - ./.flask.env
+
+  mongo:
+    image: mongo:4.2.16
+    container_name: mongo_con
+    restart: always
+    volumes: 
+     - ./mongo_database:/data/db 
+     - ./backup:/backup
+    env_file: 
+      - ./.mongo.env
+
+  mongo-express:
+    image: mongo-express:1.0.0-alpha
+    container_name: mongo-express_con
+    restart: always
+    ports:
+      - 8081:8081
+    env_file: 
+      - ./.mongo-express.env
+    depends_on: 
+      - mongo
