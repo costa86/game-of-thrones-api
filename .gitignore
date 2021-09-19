@@ -13,10 +13,10 @@ instance/*
 __pycache__/
 *.py[cod]
 *$py.class
-
+*.zip
 # C extensions
 *.so
-
+sample.py
 # Distribution / packaging
 .Python
 build/

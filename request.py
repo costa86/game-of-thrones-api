@@ -9,7 +9,8 @@ Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deseru
 """
 
 
-base_url = "http://localhost:5000/v1"
+# base_url = "http://localhost:5000/v1"
+base_url = "http://134.209.232.100:5000/v1"
 
 def get_request(url):
     headers = {

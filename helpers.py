@@ -1,8 +1,6 @@
 from pymongo import MongoClient
 import os
 from bson import ObjectId
-import random
-import string
 import datetime
 
 
