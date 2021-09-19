@@ -25,6 +25,7 @@ http://134.209.232.100:8081/
 
 ## API documentation
 
+https://documenter.getpostman.com/view/11011869/UUxtEWB6
 
 ## Preparation steps :warning:
 These steps have already been made. So you should follow them only if you want to reproduce the whole setup process from the ground.
