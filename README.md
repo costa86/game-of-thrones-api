@@ -20,8 +20,8 @@ http://134.209.232.100:8081/
 
     ssh -i <private_key_file_path> bold@134.209.232.100
 
+* Send me your public key (costa86@zoho.com)
 * Server user / password: bold / 123456
-* Private key file / passphrase: [key](./key) / 123456
 
 ## API documentation
 
