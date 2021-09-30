@@ -1,40 +1,40 @@
-# Project
+
+# Game of Thrones's episodes API
+
+[![MIT License](https://img.shields.io/apm/l/atomic-design-ui.svg?)](https://github.com/tterb/atomic-design-ui/blob/master/LICENSEs)
 
 ## Info
 
-The live project is on a Linux machine hosted on Digital Ocean.
+This is an API that serves data related to the episodes of the TV show "Game of Thrones".
 
 ## Stack
 
 * Flask
-* MongoDB
+* MongoD
 
-## Production server
-http://134.209.232.100:5000/
+## Features
 
-## Mongo admin control page
-
-http://134.209.232.100:8081/
-
-## For SSH connection to the server
-
-    ssh -i <private_key_file_path> bold@134.209.232.100
-
-* Send me your public key (costa86@zoho.com)
-* Server user / password: bold / 123456
-
+* Get information for an episode
+* CRUD operations for comments of an episode
+* Get episodes by rating
+ 
 ## API documentation
 
 https://documenter.getpostman.com/view/11011869/UUxtEWB6
 
-## Preparation steps :warning:
-These steps have already been made. So you should follow them only if you want to reproduce the whole setup process from the ground.
+## Run locally (docker)
+
+    docker-compose up -d
+
+## Auto-deployment
+
+The steps below are for deploying the app on a Linux machine hosted on Digital Ocean, using Terraform. 
 
 ### On client machine
 
 #### Server creation
 
-Make sure you updated your digital ocean token key [here](terraform/terraform.tfvars)
+Make sure you have updated your digital ocean token key [here](terraform/terraform.tfvars) :warning:
 
     cd terraform 
     terraform plan
@@ -42,20 +42,16 @@ Make sure you updated your digital ocean token key [here](terraform/terraform.tf
 
 ### On server machine
 
-#### Installation
+#### Installation of requirements
 
     apt upgrade
     apt install docker.io docker-compose unzip apache2 -y
 
-#### Start the project
-
-Load the aliases script (convenience tool)
-
-    . aliases.sh
+#### Starting the project
 
 Run docker containers in detached mode
 
-    dcud
+    docker-compose up -d
 
 #### Polulating the database
 
@@ -68,3 +64,16 @@ Export records to database
     mongoimport backup/episodes.json -d gotdb -c episodes --authenticationDatabase admin -u root -p example --drop 
 
 
+#### Accessing Mongo's admin control page
+
+http://<server_ip>:8081/
+
+#### For SSH connection to the server
+
+    ssh -o IdentitiesOnly=yes -i <private_key_file_path> <server_user>@<server_ip>
+
+## Links
+
+[![portfolio](https://img.shields.io/badge/my_portfolio-000?style=for-the-badge&logo=ko-fi&logoColor=white)](https://costa86.com/)
+
+[![linkedin](https://img.shields.io/badge/linkedin-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/costa86/)
