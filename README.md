@@ -5,6 +5,8 @@
 
 ## Info
 
+![Logo](https://franklincovey.com.br/wp-content/uploads/2019/05/1-Game-of-thrones.jpg)
+
 This is an API that serves data related to the episodes of the TV show "Game of Thrones".
 
 ## Stack
