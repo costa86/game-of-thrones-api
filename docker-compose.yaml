@@ -14,7 +14,7 @@ services:
 
   mongo:
     image: mongo:4.2.16
-    container_name: mongo_con
+    container_name: mongo-con
     restart: always
     volumes: 
      - ./mongo_database:/data/db 

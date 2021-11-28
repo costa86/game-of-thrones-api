@@ -59,7 +59,7 @@ Run docker containers in detached mode
 
 Access mongo container
 
-    docker exec -it mongo_con sh
+    docker exec -it mongo-con bash
 
 Export records to database
 
