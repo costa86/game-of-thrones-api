@@ -12,5 +12,5 @@ variable "image" {
 variable "public_key" {
   description = "SSH public key path"
   type        = string
-  default     = "/home/costa/.ssh/sample.pub"
+  default     = "/home/lorenzo/.ssh/main.pub"
 }

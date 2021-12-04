@@ -1,0 +1,210 @@
+{
+	"info": {
+		"_postman_id": "82ba6bc5-1b76-4860-ae53-595a5a03c9cc",
+		"name": "Game of Thrones API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Details about an episode",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{baseUrl}}/episodes?id=6147635740b5f3959a60893d",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"episodes"
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "6147635740b5f3959a60893d",
+							"description": "Episode ID"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Add comment to episode",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"comment\": \"really awesome\",\n    \"id\": \"6147635740b5f3959a60893a\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{baseUrl}}/comments/episodes",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"comments",
+						"episodes"
+					]
+				},
+				"description": "* comment: The comment\n* id: Episode ID"
+			},
+			"response": []
+		},
+		{
+			"name": "Get comments for an episode",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{baseUrl}}/comments/episodes?id=6147635740b5f3959a60893a",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"comments",
+						"episodes"
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "6147635740b5f3959a60893a",
+							"description": "Episode ID"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete a comment of an episode",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{baseUrl}}/comments/delete?id=61477ceceb71a715b892059f",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"comments",
+						"delete"
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "61477ceceb71a715b892059f",
+							"description": "Comment ID"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Edit a comment of an episode",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"newText\":\"lorem_ipsum\",\n    \"id\": \"61477e74eb71a715b89205a0\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{baseUrl}}/comments",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"comments"
+					]
+				},
+				"description": "* newText: The new comment\n* id: Comment ID"
+			},
+			"response": []
+		},
+		{
+			"name": "Get episodes by minimal rating",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{baseUrl}}/episodes/ratings/above?rating=9.5&season=3",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"episodes",
+						"ratings",
+						"above"
+					],
+					"query": [
+						{
+							"key": "rating",
+							"value": "9.5",
+							"description": "Desired rating"
+						},
+						{
+							"key": "season",
+							"value": "3",
+							"description": "Season (if not provided, all seasons will be used)"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"auth": {
+		"type": "basic",
+		"basic": [
+			{
+				"key": "username",
+				"value": "<Basic Auth Username>",
+				"type": "string"
+			},
+			{
+				"key": "password",
+				"value": "<Basic Auth Password>",
+				"type": "string"
+			}
+		]
+	},
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "baseUrl",
+			"value": "http://134.209.232.100:5000/v1"
+		}
+	]
+}

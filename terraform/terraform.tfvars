@@ -1,1 +1,1 @@
-do_token = "your-digital-ocean-key"
+do_token = "f62f165e24118e3bbdd0e00dad7a2f986f725cfd3f0d46f25073f33479402b5e"

@@ -3,7 +3,7 @@ version: '3.1'
 services:
   flask:
     build: .
-    container_name: flask_con
+    container_name: flask-con
     command: flask run
     volumes:
       - .:/code
@@ -24,7 +24,7 @@ services:
 
   mongo-express:
     image: mongo-express:1.0.0-alpha
-    container_name: mongo-express_con
+    container_name: mongo-express-con
     restart: always
     ports:
       - 8081:8081

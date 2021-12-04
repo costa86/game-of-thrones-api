@@ -22,7 +22,7 @@ This is an API that serves data related to the episodes of the TV show "Game of 
  
 ## API documentation
 
-https://documenter.getpostman.com/view/11011869/UUxtEWB6
+https://documenter.getpostman.com/view/18638297/UVJhDEuV
 
 ## Run locally (docker)
 
@@ -46,8 +46,8 @@ Make sure you have updated your digital ocean token key [here](terraform/terrafo
 
 #### Installation of requirements
 
-    apt upgrade
-    apt install docker.io docker-compose unzip apache2 -y
+    apt update
+    apt install docker.io docker-compose mongo-tools unzip apache2 -y
 
 #### Starting the project
 

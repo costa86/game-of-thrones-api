@@ -4,18 +4,7 @@ terraform {
       source  = "digitalocean/digitalocean"
       version = "2.10.1"
     }
-    random = {
-      source  = "hashicorp/random"
-      version = "3.1.0"
-    }
   }
-}
-
-provider "random" {
-}
-
-resource "random_id" "server" {
-  byte_length = 4
 }
 
 
@@ -30,7 +19,8 @@ resource "digitalocean_ssh_key" "default" {
 
 resource "digitalocean_droplet" "web" {
   image    = var.image
-  name     = "server-${random_id.server.hex}"
+  name     = "server-a"
+
   region   = "fra1"
   size     = "s-1vcpu-1gb"
   ssh_keys = [digitalocean_ssh_key.default.fingerprint]
