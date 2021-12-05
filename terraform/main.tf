@@ -13,7 +13,7 @@ provider "digitalocean" {
 }
 
 resource "digitalocean_ssh_key" "default" {
-  name       = "Terraform Example"
+  name       = "Terraform b"
   public_key = file(var.public_key)
 }
 

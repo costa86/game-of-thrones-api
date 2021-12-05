@@ -9,7 +9,7 @@ Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu 
 Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
 """  
 HEADERS = {"Content-Type":"application/json"}
-BASE_URL = "http://localhost:5000/v1"
+BASE_URL = "http://164.90.191.234:5000/v1"
 
 def get_request(url):
     r = requests.get(url=url,headers=HEADERS)

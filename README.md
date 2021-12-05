@@ -36,7 +36,15 @@ The steps below are for deploying the app on a Linux machine hosted on Digital O
 
 #### Server creation
 
-Make sure you have updated your digital ocean token key [here](terraform/terraform.tfvars) :warning:
+Make sure you have updated your digital ocean token key: :warning:
+
+    
+    #terraform/terraform.tfvars
+
+    do_token="<digital_ocean_token"
+
+
+Then:
 
     cd terraform 
     terraform plan
@@ -46,8 +54,7 @@ Make sure you have updated your digital ocean token key [here](terraform/terrafo
 
 #### Installation of requirements
 
-    apt update
-    apt install docker.io docker-compose mongo-tools unzip apache2 -y
+    apt update && apt install docker.io docker-compose -y
 
 #### Starting the project
 

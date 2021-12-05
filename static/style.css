@@ -4,19 +4,25 @@
     width: 100%;
   }
   
-  #episodes td, #episodes th {
-    border: 1px solid #ddd;
-    padding: 8px;
-  }
+#episodes td, #episodes th {
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+
+#episodes tr:nth-child(even){background-color: #f2f2f2;}
+
+#episodes tr:hover {background-color: #ddd;}
+
+#episodes thead th {
+  position: sticky;
+  top: 0;
+}
+
   
-  #episodes tr:nth-child(even){background-color: #f2f2f2;}
-  
-  #episodes tr:hover {background-color: #ddd;}
-  
-  #episodes th {
-    padding-top: 12px;
-    padding-bottom: 12px;
-    text-align: left;
-    background-color: #04AA6D;
-    color: white;
-  }
+#episodes th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: left;
+  background-color: #042baa;
+  color: white;
+}

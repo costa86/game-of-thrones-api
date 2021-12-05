@@ -14,7 +14,8 @@ alias dvp='docker volume prune'
 
 cd /opt
 
-#INSTALL DEPENDENCIES
+#UPDATE & INSTALL DEPENDENCIES
+apt update
 apt install docker.io docker-compose -y
 
 #GET REPO
