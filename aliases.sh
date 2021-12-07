@@ -1,0 +1,11 @@
+alias c='clear'
+alias l=ls
+alias dcd='docker compose down --remove-orphans'
+alias dcp='docker container prune'
+alias dcu='docker compose up'
+alias dcud='docker compose up -d'
+alias di='docker images'
+alias dlc='docker container ls -a'
+alias dsp='docker system prune'
+alias dvp='docker volume prune'
+alias dnp='docker network prune'

@@ -1,29 +1,26 @@
 #RUN ON NEW SERVER
-
-#ALIASES FOR LAZY PEOPLE
-alias c='clear'
-alias l=ls
-alias dcd='docker-compose down'
-alias dcp='docker container prune'
-alias dcu='docker-compose up'
-alias dcud='docker-compose up -d'
-alias di='docker images'
-alias dlc='docker container ls -a'
-alias dsp='docker system prune'
-alias dvp='docker volume prune'
-
 cd /opt
 
-#UPDATE & INSTALL DEPENDENCIES
+#UPDATE & INSTALL PACKAGES
 apt update
-apt install docker.io docker-compose -y
+apt install docker.io fish -y
+
+#INSTALL DOCKER COMPOSE V2 PLUGIN
+PLUGIN_DIR=/usr/local/lib/docker/cli-plugins
+mkdir -p $PLUGIN_DIR
+curl -SL https://github.com/docker/compose/releases/download/v2.0.1/docker-compose-linux-x86_64 -o $PLUGIN_DIR/docker-compose
+chmod +x $PLUGIN_DIR/docker-compose
 
 #GET REPO
 git clone https://github.com/costa86/game-of-thrones-api.git
 cd game-of-thrones-api
 
 #START DOCKER
-docker-compose up -d
+docker compose --profile basic up -d
+
+#START FISH SHELL
+fish
 
 #POPULATE DB
 #docker exec mongo-con mongoimport backup/episodes.json -d gotdb -c episodes --authenticationDatabase admin -u root -p example --drop 
+#docker compose exec mongo mongoimport backup/episodes.json -d gotdb -c episodes --authentication>
