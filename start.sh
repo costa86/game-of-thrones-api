@@ -18,8 +18,9 @@ cd game-of-thrones-api
 #START DOCKER
 docker compose --profile basic up -d
 
-#START FISH SHELL
+#START FISH SHELL & SET ALIASES
 fish
+. aliases
 
 #POPULATE DB
 #docker compose exec mongo mongoimport backup/episodes.json -d gotdb -c episodes --authenticationDatabase admin -u root -p example --drop 

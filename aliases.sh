@@ -1,4 +1,4 @@
-alias c='clear'
+alias c=clear
 alias l=ls
 alias dcd='docker compose down --remove-orphans'
 alias dcp='docker container prune'
