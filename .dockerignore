@@ -3,4 +3,4 @@ env
 backup
 __pycache__
 *.env
-*.zip
+terraform

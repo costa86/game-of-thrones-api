@@ -22,5 +22,4 @@ docker compose --profile basic up -d
 fish
 
 #POPULATE DB
-#docker exec mongo-con mongoimport backup/episodes.json -d gotdb -c episodes --authenticationDatabase admin -u root -p example --drop 
-#docker compose exec mongo mongoimport backup/episodes.json -d gotdb -c episodes --authentication>
+#docker compose exec mongo mongoimport backup/episodes.json -d gotdb -c episodes --authenticationDatabase admin -u root -p example --drop 
