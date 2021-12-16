@@ -7,7 +7,9 @@
 
 ![Logo](https://franklincovey.com.br/wp-content/uploads/2019/05/1-Game-of-thrones.jpg)
 
-This is an API that serves data related to the episodes of the TV show "Game of Thrones".
+This is an API that serves data related to the episodes of the TV show "Game of Thrones". 
+
+This project was presented at Docker All-Hands #4, on 05 Dec 2021. Watch it here: https://www.youtube.com/watch?v=fy6pXminRLU
 
 ## Stack
 
